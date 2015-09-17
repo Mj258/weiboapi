@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jQuery练习</title>
+    <style>
+        *{margin:0;padding:0;}
+        h3{text-align:center;}
+        .all{width:300px;height:500px;}
+        .content{width:298px;height:348px;border:solid 1px #ccc;}
+        .message{width:300px;height:100px;background:red;font-size:12px;line-height:25px;}
+        .ajax{width:300px;height:50px;background:#f90;}
+    </style>
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+    <script>
+        $(function(){
+            //   提交按钮点击事件
+            $("#btn").bind("click",function(){
+                // 获取用户名输入框用变量存起来
+                var $text=$("#text"),
+                        $test=$("#test");
+                // 判断是否为空
+                if($text.val()!=="" && $test.val()!=="" && $test.val()!=="请输入内容.....")
+                {
+                    // 自定义函数哦
+                    getmessage();
+                }
+                else
+                {
+                    alert("输入为空");
+                    $test.focus();
+                    return false;
+                }
+            });
+        });
+        //   自定义函数开始
+        function getmessage(){
+            //   ajaxStart()开始
+            $("#tip").ajaxStart(function(){
+                $(this).html("正在加载请求")
+            });
+            //   ajaxStop()开始
+            $("#tip").ajaxStop(function(){
+                $(this).html("加载完成")
+            });
+            // ajax开始
+            $.ajax({
+                Type:"get",
+                url: "",
+                data: "",
+                success: function(){
+                    // 自定义函数
+                    send()
+                },
+            });
+        }
+        // 自定义函数
+        function send(){
+            var $text=$("#text").val(),
+                    $test=$("#test").val();
+            var all=getTime()+" "+$text+" 说:"+"<br/>"+$test+"<br/>";
+            $("#liy").append(all)
+
+        }
+        function getTime(){
+            var data=new Date();
+            var year=data.getFullYear();
+            var month=data.getMonth()+1;
+            var day=data.getDay();
+            var hours=data.getHours();
+            var minutes=data.getMinutes();
+            var seconds=data.getSeconds();
+            var time=year+" "+month+" "+day+" "+hours+":"+minutes+":"+seconds;
+            return time;
+        }
+    </script>
+</head>
+<body>
+<div class="all">
+    <!--标题-->
+    <h3>留言板</h3>
+    <!--聊天区域-->
+    <div class="content" id="liy">
+    </div>
+    <!--聊天区域结束-->
+    <!--输入提交区域-->
+    <div class="message" id="message-text">
+        用户名:<input type="text" id="text" name="username">
+        <textarea id="test" rows='3' cols='42' placeholder="请输入内容....."></textarea>
+        <input type="submit" value="提交" id="btn">
+    </div>
+    <!--输入结束-->
+    <!--ajax状态区域-->
+    <div class="ajax" id="ajax-text">
+     <span id="tip">
+      ajax加载状态我会改变呦！
+     </span>
+    </div>
+    <!--ajax结束-->
+</div>
+</body>
+</html>

@@ -48,5 +48,5 @@ $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
 $mar = preg_match_all($script, $data);
-print_r($mar);
+echo $mar;
 //print_r($data);
