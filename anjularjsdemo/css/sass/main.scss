@@ -1,0 +1,244 @@
+@import "compass/support";
+@import "compass/reset";
+@import "compass/css3";
+
+@import "compass/layout";
+@import "compass/typography";
+@import "compass/utilities";
+
+.grad{
+    @include columns(20em 2);
+}
+#two-column {
+  @include column-count(2);
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+#three-column {
+  @include column-count(3);
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+#four-column-with-rule {
+  @include column-count(4);
+  @include column-rule(1px, solid, red);
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.border-radius{
+    @include border-radius(5);
+}
+.box{
+    @include box-sizing(border-box);
+}
+
+.box-shadow{
+    @include single-box-shadow;
+}
+.regions-into{
+    @include flow-into(target);
+    border: 10px solid green;
+    margin: 20px;
+    width: 200px;
+}
+.regions-from{
+    @include flow-from(target);
+    border: 10px solid green;
+    margin: 20px;
+    width: 200px;
+}
+
+.filter{
+    @include filter(2);
+}
+
+#vertical-center {
+  padding: 0;
+
+  li {
+    background: #CCC;
+    width: 15em;
+    margin: .5em;
+    height: 5em;
+    text-align: center;
+    vertical-align: text-top;
+    display: inline-block; /* non-flexbox browsers */
+    @include display-flex(inline-flex);
+    @include align-items(center);
+    @include justify-content(center);
+  }
+}
+/*@include font-face("Blooming Grove", font-files("../bootsrap/fonts/glyphicons-halflings-regular.ttf"));*/
+
+.hyphenation{
+    @include word-break(break-all);
+}
+
+// This will yield a radial gradient with an apparent specular highlight
+#radial-gradient {
+  @include background-image(radial-gradient(45px 45px, cyan 10px, dodgerblue 30px));
+}
+
+// This yields a linear gradient spanning from the upper left corner to the lower right corner
+#linear-gradient {
+  @include background-image(linear-gradient(to bottom right, white, #dddddd));
+}
+
+// This yields a gradient starting at the top with #fff, ending in #aaa
+#v-gradient {
+  @include background-image(linear-gradient(white, #aaaaaa));
+}
+
+// Same as above but with a #ccc at the halfway point
+#v-gradient-2 {
+  @include background-image(linear-gradient(white, #cccccc, #aaaaaa));
+}
+
+// Same as the first example but with #ccc at the 30% from the top, and #bbb at 70% from the top
+#v-gradient-3 {
+  @include background-image(linear-gradient(white, #cccccc 30%, #bbbbbb 70%, #aaaaaa));
+}
+
+// This yields a horizontal linear gradient spanning from left to right.
+#h-gradient {
+  @include background-image(linear-gradient(to right, white, #dddddd));
+}
+
+#svg-gradient {
+  $svg-gradient-shim-threshold: 1 !global;
+  @include background-image(linear-gradient(to right, #2ac363, #cd8c14, #9c4cc2));
+  width: 80px;
+  height: 80px;
+}
+
+#angle-gradient {
+  $svg-gradient-shim-threshold: 1 !global;
+  @include background-image(linear-gradient(120deg, #2ac363, #cd8c14, #9c4cc2));
+  width: 80px;
+  height: 80px;
+}
+
+#angle-gradient-svg {
+  background-image: -svg(linear-gradient(120deg, #2ac363, #cd8c14, #9c4cc2));
+  width: 80px;
+  height: 80px;
+}
+
+/*.inlineblock{
+    @include Inline-block();
+}
+*/
+
+.opa{
+    @include opacity(2);
+}
+
+/*.select{
+    @include selection(#fe57a1, #fff);
+}*/
+
+.share_uni{
+
+}
+.text-shadow{
+    @include text-shadow();
+}
+
+
+.transform{
+    @include transform-origin(3D-only);
+    /*[ origin-x, origin-y, origin-z, ]*/
+}
+
+.transition{
+    @include transition-property(all);
+}
+
+.user-interface{
+    input[type="text"] {
+      @include input-placeholder {
+        color: #bfbfbf;
+        font-style: italic;
+      }
+    }
+}
+
+
+.layout{
+    @include baseline-grid-background();
+}
+
+@include sticky-footer(72px, "#layout", "#layout_footer", "#footer");
+
+#header {
+  background: #999999;
+  height: 72px;
+}
+
+#footer {
+  background: #cccccc;
+}
+
+.example {
+  height: 500px;
+  border: 3px solid red;
+  p {
+    margin: 1em 0.5em;
+  }
+}
+
+.stretch-container {
+  border: 1px solid #999999;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  @include inline-block;
+}
+
+%stretched {
+  $stretch-color: #4c6b99;
+  border: 3px solid $stretch-color;
+  @include border-radius(8px);
+  display: block;
+  background-color: darken($stretch-color, 30%);
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5em;
+}
+
+#stretch-full {
+  @extend %stretched;
+  @include stretch;
+}
+
+#stretch-offset {
+  @extend %stretched;
+  @include stretch(1em, 1em, 1em, 1em);
+}
+
+#stretch-x {
+  @extend %stretched;
+  @include stretch-x;
+}
+
+#stretch-y {
+  @extend %stretched;
+  @include stretch-y;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}

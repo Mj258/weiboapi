@@ -1,0 +1,6 @@
+/* line 4, ../sass/main.scss */
+.container {
+  -moz-columns: 20em 2;
+  -webkit-columns: 20em 2;
+  columns: 20em 2;
+}

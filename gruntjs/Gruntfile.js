@@ -36,6 +36,16 @@ module.exports = function(grunt) {
                     cssDir: 'css'
                 }
             }
+        },
+        requirejs: {
+            compile: {
+                options: {
+                    baseUrl: "base",
+                    mainConfigFile: "config.js",
+                    name: "almond", // assumes a production build using almond
+                    out: "dist/optimized.js"
+                }
+            }
         }
     });
 
@@ -43,7 +53,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
     // 默认被执行的任务列表。
     grunt.registerTask('default', ['uglify','compass']);
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="phonecatApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>demo angular js</title>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="js/controller.js"></script>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body ng-controller="PhoneListCtrl">
+
+<ul>
+    <li ng-repeat="phone in phones">
+        <span>{{phone.name}}</span>
+        <p>{{phone.snippet}}</p>
+    </li>
+</ul>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <!--Sidebar content-->
+
+            Search: <input ng-model="query">
+
+        </div>
+        <div class="col-md-10">
+            <!--Body content-->
+
+            <ul class="phones">
+                <li ng-repeat="phone in phones | filter:query">
+                    {{phone.name}}
+                    <p>{{phone.snippet}}</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
