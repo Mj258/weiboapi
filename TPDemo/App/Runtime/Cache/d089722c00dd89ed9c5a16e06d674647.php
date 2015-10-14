@@ -24,7 +24,6 @@
 <div class="container">
     <h1>User Demo</h1>
 </div>
-
 <footer>
     <div class="container">
         <row><a href="http://mtn-sh.com">mtn-sh</a></row>

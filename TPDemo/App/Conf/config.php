@@ -42,10 +42,10 @@ $config1 = array(
     'DB_DSN'           => 'mysql://root:root@localhost:3306/2'
 
 );
-//$config2 = __ROOT__."/Common/config.php";
-//return $config1;
-//$config2 = include(__ROOT__ ."/Common/config.php");
-//echo $config2;
+$config2 = __ROOT__."/Common/config.php";
+
+$config2 =include __ROOT__ ."/Common/config.php";
+
 //print_r($config2);
 return $config1;
 //$config2 = file_exists($config2) ? include "$config2" : array();
