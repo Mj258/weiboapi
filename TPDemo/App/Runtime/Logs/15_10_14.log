@@ -1,0 +1,69 @@
+[ 2015-10-14T16:54:56+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/index.php/index/login
+ERR: 非法操作:login
+
+[ 2015-10-14T16:56:13+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/index.php/login/user
+ERR: 非法操作:user
+
+[ 2015-10-14T17:03:36+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/index.php/login/login.html
+ERR: 非法操作:login
+
+[ 2015-10-14T17:10:59+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/index.php/user/user.html
+ERR: 非法操作:user
+
+[ 2015-10-14T17:11:04+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/index.php/user/user
+ERR: 非法操作:user
+
+[ 2015-10-14T17:11:50+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/index.php/user/user
+ERR: 非法操作:user
+
+[ 2015-10-14T17:11:51+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/index.php/user/user.html
+ERR: 非法操作:user
+
+[ 2015-10-14T17:11:57+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/login/login.html
+ERR: 非法操作:login
+
+[ 2015-10-14T17:15:00+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/login/Login.html
+ERR: 非法操作:login
+
+[ 2015-10-14T17:15:28+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/login/user.html
+ERR: 非法操作:user
+
+[ 2015-10-14T17:39:02+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/user
+ERR: Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2015-10-14T17:40:25+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/user
+ERR: Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2015-10-14T17:44:09+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/user
+ERR: Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2015-10-14T17:44:12+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/
+ERR: Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2015-10-14T17:59:58+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') E:\wamp\www\weiboapi\weiboapi\TPDemo\App\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\wamp\www\weiboapi\weiboapi\TPDemo\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) E:\wamp\www\weiboapi\weiboapi\TPDemo\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+ERR: Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2015-10-14T18:32:24+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') E:\wamp\www\weiboapi\weiboapi\TPDemo\App\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\wamp\www\weiboapi\weiboapi\TPDemo\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) E:\wamp\www\weiboapi\weiboapi\TPDemo\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+ERR: Access denied for user 'root'@'localhost' (using password: NO)
+
+[ 2015-10-14T18:33:23+08:00 ] 0.0.0.0 /weiboapi/weiboapi/TPDemo/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of IndexAction::show() should be compatible with Action::show($content, $charset = '', $contentType = '', $prefix = '') E:\wamp\www\weiboapi\weiboapi\TPDemo\App\Lib\Action\IndexAction.class.php 第 25 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead E:\wamp\www\weiboapi\weiboapi\TPDemo\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+NOTIC: [2] mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) E:\wamp\www\weiboapi\weiboapi\TPDemo\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+ERR: Access denied for user 'root'@'localhost' (using password: NO)
+

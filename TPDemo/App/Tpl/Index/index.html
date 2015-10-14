@@ -1,0 +1,12 @@
+<include file="Public:header" />
+<div class="container">
+    <ul>
+        <volist name="list" id="vo">
+            <li>{$vo.ID}</li>
+            <li>{$vo.user_login}</li>
+            <li>{$vo.user_pass}</li>
+            <li>{$vo.user_email}</li>
+        </volist>
+    </ul>
+</div>
+<include file="Public:footer"/>
